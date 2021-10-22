@@ -1,18 +1,22 @@
 <template>
-    <div>
-        <p>Todo Item</p>
+    <div class="todo-item" v-bind:class="{'is-complete':todo.completed}">
+        <p>
+            <input type="checkbox" v-on:change="markComplete">
+            {{todo.title}}</p>
     </div>
 </template>
 
 <script>
-import { defineComponent } from '@vue/composition-api'
+
 
 export default{
-    name: 'TodoItem'
+    name: 'TodoItem',
+    props: ['todo'],
 }
 </script>
 
 <style scoped>
+
 .todo-item{
 
     background: #f4f4f4;
