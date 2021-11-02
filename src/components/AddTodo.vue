@@ -1,3 +1,5 @@
+
+/* eslint-disable */
 <template>
     <div>
         <form @submit="addTodo">
@@ -9,7 +11,6 @@
 
 <script>
 
-//import uuid from 'uuid';
 
 
 export default{
